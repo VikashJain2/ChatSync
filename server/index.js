@@ -31,7 +31,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
   })
 );
-
+app.use(express.json())
 /**
  * Parse cookies from incoming requests
  */
