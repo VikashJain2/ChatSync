@@ -6,6 +6,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
+import authRouter from "./routes/Auth.routes.js";
 
 /**
  * Create an instance of the Express app
@@ -36,6 +37,7 @@ app.use(express.json())
  * Parse cookies from incoming requests
  */
 app.use(cookieParser());
+app.use("/api/auth",authRouter)
 
 /**
  * Set the port for the server to listen on
